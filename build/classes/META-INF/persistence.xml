@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="fcmJPA" transaction-type="RESOURCE_LOCAL">
+		<class>com.ford.fc.fcm.domain.User</class>
+		<class>com.ford.fc.fcm.domain.UserProfile</class>
+		<class>com.ford.fc.fcm.domain.UserAccount</class>
+<!-- 		
+		<class>com.ford.fc.fcm.domain.TransactionMaster</class>
+		<class>com.ford.fc.fcm.domain.AccountCategoryDetail</class>
+		<class>com.ford.fc.fcm.domain.AccountCategoryDetailPK</class>
+		<class>com.ford.fc.fcm.domain.TransactionAccount</class>
+		<class>com.ford.fc.fcm.domain.TransactionAccountPK</class>
+		<class>com.ford.fc.fcm.domain.TransactionCategory</class>
+		<class>com.ford.fc.fcm.domain.TransactionCategoryPK</class>
+-->		
+		<class>com.ford.fc.fcm.domain.AccountType</class>
+		<class>com.ford.fc.fcm.domain.AccountTypePK</class>
+		<class>com.ford.fc.fcm.domain.Category</class>
+		<class>com.ford.fc.fcm.domain.CategoryPK</class>
+		<properties>
+			<property name="javax.persistence.jdbc.user" value="app"/>
+			<property name="javax.persistence.jdbc.password" value="app"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527//Users/dslater/javadb/fcm"/>
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+			<property name="eclipselink.jdbc.bind-parameters" value="true"/>
+			<property name="eclipselink.logging.logger" value="DefaultLogger"/>
+			<property name="eclipselink.logging.level.sql" value="FINE"/>
+			<property name="eclipselink.logging.level" value="FINE"/>
+			<property name="eclipselink.logging.parameters" value="true"/>
+		</properties>
+	</persistence-unit>
+</persistence>
